@@ -1,4 +1,4 @@
-package classes;
+package br.com.caelum.argentum.reader;
 
 import static org.junit.Assert.*;
 
@@ -6,6 +6,8 @@ import java.util.Calendar;
 
 import org.junit.Assert;
 import org.junit.Test;
+
+import classes.Negocio;
 
 public class NegocioTest {
 
