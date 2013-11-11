@@ -27,14 +27,14 @@ public final class CandleStick {
 			throw new IllegalArgumentException("Fechamento não pode ser negativo");
 		}
 		
-		if(minimo<0)
-		{
-			throw new IllegalArgumentException("Minimo não pode ser negativo");
-		}
-		
 		if(maximo<0)
 		{
 			throw new IllegalArgumentException("Máximo não pode ser negativo");
+		}
+		
+		if(minimo<0)
+		{
+			throw new IllegalArgumentException("Minimo não pode ser negativo");
 		}
 		
 		if(volume<0)
