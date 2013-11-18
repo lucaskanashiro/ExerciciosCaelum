@@ -1,41 +1,40 @@
 package classes;
 import java.util.Calendar;
-import java.util.List;
 
 public final class Negocio {
 	
-	private final double preco;
-	private final int quantidade;
-	private final Calendar data;
+	//nomes de atributos não significativos
+	private final double p;
+	private final int qtd;
+	private final Calendar d;
 
 	public Negocio(double preco, int quantidade, Calendar data) {		
-		
+	
+	//pode não ser responsabilidade do construtor validar atributo	
 	if(data == null){
 		throw new IllegalArgumentException("Data não pode ser nula");
 	}
 	
-		this.preco = preco;
-		this.quantidade = quantidade;
-		this.data = data;
+		this.p = preco;
+		this.qtd = quantidade;
+		this.d = data;
 	}
-	
-	
 
 	public double getPreco() {
-		return preco;
+		return p;
 	}
 
 	public int getQuantidade() {
-		return quantidade;
+		return qtd;
 	}
 
 	public Calendar getData() {
-		return (Calendar) this.data.clone();
+		return (Calendar) this.d.clone();
 	}
 	
 	
 	public double getVolume(){
-		return preco * quantidade;
+		return p * qtd;
 	}
 	
 }

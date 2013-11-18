@@ -2,6 +2,7 @@ package classes;
 import java.util.Calendar;
 
 public final class CandleStick {
+	
 	private final double abertura;
 	private final double fechamento;
 	private final double minimo;
@@ -12,6 +13,7 @@ public final class CandleStick {
 	public CandleStick(double abertura, double fechamento, double minimo,
 			double maximo, double volume, Calendar data) {
 		
+		//validações podem ser feitas em outro lugar do código
 		if(maximo<minimo)
 		{
 			throw new IllegalArgumentException("Valor máximo não pode ser menor que o minimo");

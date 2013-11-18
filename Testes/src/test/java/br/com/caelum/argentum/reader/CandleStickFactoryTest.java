@@ -1,8 +1,6 @@
 package br.com.caelum.argentum.reader;
 
 
-import static org.junit.Assert.*;
-
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.List;
@@ -15,6 +13,7 @@ import classes.CandleStick;
 import classes.CandleStickFactory;
 import classes.Negocio;
 
+@SuppressWarnings("deprecation")
 public class CandleStickFactoryTest {
 
 	@Test

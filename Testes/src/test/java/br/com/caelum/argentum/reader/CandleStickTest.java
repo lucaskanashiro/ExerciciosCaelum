@@ -1,7 +1,5 @@
 package br.com.caelum.argentum.reader;
 
-import static org.junit.Assert.*;
-
 import java.util.Calendar;
 
 import junit.framework.Assert;
@@ -10,6 +8,7 @@ import org.junit.Test;
 
 import classes.CandleStick;
 
+@SuppressWarnings("deprecation")
 public class CandleStickTest {
 
 	@Test(expected = IllegalArgumentException.class)
@@ -55,7 +54,8 @@ public class CandleStickTest {
 
 		CandleStick candle = new CandleStick(10, 20, 10, 15, 15, c);
 
-		Assert.assertEquals(5, candle.getData().DAY_OF_MONTH);
+		candle.getData();
+		Assert.assertEquals(5, Calendar.DAY_OF_MONTH);
 	}
 
 	@Test
