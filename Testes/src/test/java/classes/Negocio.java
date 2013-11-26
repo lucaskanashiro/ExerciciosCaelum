@@ -3,38 +3,33 @@ import java.util.Calendar;
 
 public final class Negocio {
 	
-	//nomes de atributos não significativos
-	private final double p;
-	private final int qtd;
-	private final Calendar d;
+	private final double preco;
+	private final int quantidade;
+	private final Calendar data;
 
 	public Negocio(double preco, int quantidade, Calendar data) {		
 	
-	//pode não ser responsabilidade do construtor validar atributo	
-	if(data == null){
-		throw new IllegalArgumentException("Data não pode ser nula");
-	}
-	
-		this.p = preco;
-		this.qtd = quantidade;
-		this.d = data;
+		Exception.validaData(data);
+
+		this.preco = preco;
+		this.quantidade = quantidade;
+		this.data = data;
 	}
 
 	public double getPreco() {
-		return p;
+		return preco;
 	}
 
 	public int getQuantidade() {
-		return qtd;
+		return quantidade;
 	}
 
 	public Calendar getData() {
-		return (Calendar) this.d.clone();
+		return (Calendar) this.data.clone();
 	}
 	
 	
 	public double getVolume(){
-		return p * qtd;
+		return preco * quantidade;
 	}
-	
 }

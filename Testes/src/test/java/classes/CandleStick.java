@@ -13,41 +13,11 @@ public final class CandleStick {
 	public CandleStick(double abertura, double fechamento, double minimo,
 			double maximo, double volume, Calendar data) {
 		
-		//validações podem ser feitas em outro lugar do código
-		if(maximo<minimo)
-		{
-			throw new IllegalArgumentException("Valor máximo não pode ser menor que o minimo");
-		}
-		
-		if(abertura<0)
-		{
-			throw new IllegalArgumentException("Abertura não pode ser negativo");
-		}
-		
-		if(fechamento<0)
-		{
-			throw new IllegalArgumentException("Fechamento não pode ser negativo");
-		}
-		
-		if(maximo<0)
-		{
-			throw new IllegalArgumentException("Máximo não pode ser negativo");
-		}
-		
-		if(minimo<0)
-		{
-			throw new IllegalArgumentException("Minimo não pode ser negativo");
-		}
-		
-		if(volume<0)
-		{
-			throw new IllegalArgumentException("Volume não pode ser negativo");
-		}
-		
-		if(data == null)
-		{
-			throw new IllegalArgumentException("Data não pode ser nula");
-		}
+		Exception.validaMaximoMinimo(maximo, minimo);
+		Exception.validaAbertura(abertura);
+		Exception.validaFechamento(fechamento);
+		Exception.validaVolume(volume);
+		Exception.validaData(data);
 		
 		this.abertura = abertura;
 		this.fechamento = fechamento;
